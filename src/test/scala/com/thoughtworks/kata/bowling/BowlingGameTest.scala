@@ -1,10 +1,10 @@
 package com.thoughtworks.kata.bowling
 
-import org.scalatest.FlatSpec
+import org.scalatest.{Matchers, FlatSpec}
 
-class BowlingGameTest extends FlatSpec {
+class BowlingGameTest extends FlatSpec with Matchers {
 
   "A game with no frames" should "have a final score of zero" in {
-    assert(false)
+    BowlingGame(Seq()).score shouldBe 0
   }
 }
